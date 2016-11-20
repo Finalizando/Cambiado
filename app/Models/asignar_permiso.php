@@ -1,6 +1,6 @@
 <?php
 /**
-     * Nombre del archivo: usuario_app.php
+     * Nombre del archivo: .php
      * Descripción:
      * Fecha de creación:08/11/2016
      * Creado por: Juan Carlos Centeno Borja

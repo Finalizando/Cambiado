@@ -1,7 +1,6 @@
 @extends('plantillas.plantilla_base')
 @section('fecha_sistema')
-<p ALIGN=left>Fecha:<?=date('m/d/Y g:ia');?></p>
-
+<p ALIGN=left>Fecha:<?=date('d/m/Y g:ia');?></p>
 @stop 
   
 @section('nombre_pantalla')

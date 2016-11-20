@@ -21,7 +21,7 @@ return [
     | the role if it is in a different namespace.
     |
     */
-    'role' => 'App\Models\rol_usuario',
+    'role' => 'App\Role',
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     | Update the permission if it is in a different namespace.
     |
     */
-    'permission' => 'App\Models\permiso_app',
+    'permission' => 'App\Permission',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     | between permissions and roles to the database.
     |
     */
-    'permission_role_table' => 'asignar_permiso',
+    'permission_role_table' => 'permission_role',
 
     /*
     |--------------------------------------------------------------------------
@@ -75,6 +75,6 @@ return [
     | database.
     |
     */
-    'role_user_table' => 'usuario_app',
+    'role_user_table' => 'role_user',
 
 ];

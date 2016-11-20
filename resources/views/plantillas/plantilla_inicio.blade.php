@@ -36,11 +36,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-4"><!--menu lateral -->
-                    @yield('menu_lateral') 
-		
-		</div>
-		<div class="col-md-4"><!--area de trabajo -->
+		<div class="col-md-12"><!--area de trabajo -->
 			<div class="row"><!--filtros -->
 				<div class="col-md-12">
                                     @yield('filtros_consulta') 
@@ -59,16 +55,13 @@
 				
 				</div>
 			</div>
-		</div>	
-            <div class="col-md-4"><!--menu lateral -->
-                    @yield('menu_lateral_derecha') 
-		
-		</div>
+		</div>	           
 	</div>
-	<div class="row"><!--pie de pagina -->
-		<div class="col-md-12">
-		<p ALIGN=center>Derechos reservados</p>
-		</div>
+        
+	<div class="row"><!--pie de pagina -->             
+	     <div class="col-md-12">  
+             @yield('pie_pagina')
+	     </div>
 	</div>
 	</div>
     
