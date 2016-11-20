@@ -14,7 +14,7 @@
             </div>
         <form class="form-signin" action="{{ url('usuario_app/ingresar') }}" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <table style="width:100%">
+        <table class="table table-bordered">
         <tr>
           <td>Nombre de usuario* </td>
           <td><input type="text" class="form-control" name="nombre_usuario" placeholder="Nombre de usuario*" required autofocus></td>
@@ -23,9 +23,8 @@
           <td>Contraseña*</td>
           <td><input type="password" class="form-control" name="password" placeholder="Contraseña*" required> </td>
         </tr>
-        </table>    
-        <p>*Campo requerido</p>
-        <table style="width:100%">
+        </table> 
+        <table class="table">
         <tr>
           <td>
               <button type="submit" class="btn btn-primary">Ingresar</button>  
@@ -35,6 +34,7 @@
           </td>
         </tr>
         </table>
+        <p>*Campo requerido</p>
         </form>
         </div>
     </div>

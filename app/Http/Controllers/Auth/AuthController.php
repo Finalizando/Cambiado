@@ -29,7 +29,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-       $this->middleware('guest', ['except' => 'getLogout']);
+       $this->middleware('guest', ['except' => 'fnc_salir']);
     }
    public function fnc_ingresar()
     {
@@ -60,7 +60,7 @@ class AuthController extends Controller
     }
     public function fnc_salir()
     {
-        Session::flush();
+               
         Auth::logout();
         return redirect('/');
     }
