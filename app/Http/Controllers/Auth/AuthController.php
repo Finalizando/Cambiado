@@ -1,5 +1,8 @@
 <?php
-
+/**
+     * Fecha de modificación:18/11/2016
+     * Creado por: Juan Carlos Centeno Borja
+     */
 namespace App\Http\Controllers\Auth;
 
 use App\User;

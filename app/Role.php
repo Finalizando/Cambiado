@@ -9,10 +9,11 @@
 namespace App;
 use Zizaco\Entrust\EntrustRole;
 /**
- * Description of role
- *
- * @author Comisca
- */
+     * Nombre del archivo: .php
+     * Descripción:
+     * Fecha de creación:18/11/2016
+     * Creado por: Juan Carlos Centeno Borja
+     */
 class Role extends EntrustRole
 {
    protected $fillable = [

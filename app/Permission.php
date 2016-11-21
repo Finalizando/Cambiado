@@ -9,10 +9,11 @@
 namespace App;
 
 /**
- * Description of Permissions
- *
- * @author Comisca
- */
+     * Nombre del archivo: .php
+     * Descripción:
+     * Fecha de creación:18/11/2016
+     * Creado por: Juan Carlos Centeno Borja
+     */
 use Zizaco\Entrust\EntrustPermission;
 class Permission extends EntrustPermission
 {

@@ -1,4 +1,9 @@
-@extends('plantillas.plantilla_inicio')
+<!-- 
+     * Nombre del archivo:principal.blade.php
+     * Descripción:
+     * Fecha de creación:06/11/2016
+     * Creado por: Juan Carlos Centeno Borja
+-->@extends('plantillas.plantilla_inicio')
 @section('fecha_sistema')
 <p ALIGN=left>Fecha:<?=date('d/m/Y g:ia');?></p>
 @stop  

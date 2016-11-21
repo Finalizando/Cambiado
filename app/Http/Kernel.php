@@ -1,5 +1,8 @@
 <?php
-
+/**
+     * Fecha de modificación:05/11/2016
+     * Creado por: Juan Carlos Centeno Borja
+     */
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;

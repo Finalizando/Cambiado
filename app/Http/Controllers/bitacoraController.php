@@ -1,31 +1,34 @@
 <?php
-
-namespace App\Http\Controllers\usuario_app;
+/**
+     * Nombre del archivo: .php
+     * Descripción:
+     * Fecha de creación:20/11/2016
+     * Creado por: Juan Carlos Centeno Borja
+     */
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Auth;
-class ingresarController extends Controller
+
+class bitacoraController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    
-    public function fnc_ingresar() {
-     if (Auth::check()){
-     return redirect('/principal');  
-     }
-     else {
-    return view('usuario_app.ingresar');
-     }
+     public function __construct() {
+        $this->middleware('auth');
+    }
+    public function fnc_show_consultar_bitacora() {
         
+        return view('bitacora/consultar_bitacora');
     }
     public function index()
     {
-        //
+        
     }
 
     /**

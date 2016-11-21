@@ -1,3 +1,9 @@
+<!-- 
+     * Nombre del archivo:principal.blade.php
+     * Descripción:
+     * Fecha de creación:18/11/2016
+     * Creado por: Juan Carlos Centeno Borja
+-->
 @extends('plantillas.plantilla_sin_columna')
 @section('fecha_sistema')
 <p ALIGN=left>Fecha:<?=date('d/m/Y g:ia');?></p>

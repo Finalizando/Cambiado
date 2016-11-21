@@ -56,8 +56,7 @@
 				</div>
 			</div>
 		</div>	           
-	</div>
-        
+	</div>        
 	<div class="row"><!--pie de pagina -->             
 	     <div class="col-md-12">  
              @yield('pie_pagina')
