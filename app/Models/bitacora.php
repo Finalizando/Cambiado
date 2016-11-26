@@ -24,6 +24,6 @@ class bitacora extends Model
    //relacion con usuario
     public function fnc_usuarios_app()
     {
-        return $this->hasMany('App\Models\usuario_app');
+        return $this->hasMany('App\User');
     }
 }
