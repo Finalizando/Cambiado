@@ -13,6 +13,14 @@
       <h5 class="text-center">Pantalla de ingreso</h5>
   </div> 
     <div class="panel-body">
+         @if($errors->any())
+            <div class="alert alert-warning" role="alert">
+            <p>Por favor corregir los siguientes errores</p>
+            @foreach ($errors->all() as $error)
+            <div>{{ $error }}</div>
+            @endforeach
+            </div>
+          @endif 
         <div class="col-md-4 col-md-offset-4">
             <div class="col-md-4 col-md-offset-4">
             <img class="profile-img" src="/sicafam/public/images/logo_login2.png" width="150" height="150"> 
@@ -36,6 +44,12 @@
           </td>
           <td>
               <button type="reset" class="btn btn-primary">Cancelar</button> 
+          </td>
+          <td>
+              <button type="button" class="btn btn-primary">Solicitar contraseña</button> 
+          </td>
+          <td>
+              <button type="button" class="btn btn-primary">Ayuda</button>
           </td>
         </tr>
         </table>

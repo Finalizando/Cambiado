@@ -1,15 +1,17 @@
 <?php
 /**
-     * Fecha de modificación:18/11/2016
-     * Creado por: Juan Carlos Centeno Borja
+     * Fecha de modificación:25/11/2016
+     * Modificado por: Juan Carlos Centeno Borja
      */
 namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
 use Auth;
-use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+//use Illuminate\Routing\Controller;
+//use Illuminate\Support\Facades\Input;
 
 class AuthController extends Controller
 {
@@ -34,18 +36,19 @@ class AuthController extends Controller
     {
        $this->middleware('guest', ['except' => 'fnc_salir']);
     }
-   public function fnc_ingresar()
+   public function fnc_ingresar(Request $request)//Agregando request
     {
-       
-      $nombre_usuario = Input::get('nombre_usuario');
-      $password = Input::get('password');
+      $nombre_usuario = $request->nombre_usuario; // Input::get('nombre_usuario');
+      $password = $request->password; //Input::get('password');
+      $rules =array('password'=> array('min:8','max:25')); //reglas de validación
+      $this->validate($request, $rules);//Realizar validación
       
-    if (Auth::attempt(['nombre_usuario' => $nombre_usuario, 'password' => $password]))
+    if (Auth::attempt(['nombre_usuario' => $nombre_usuario, 'password' => $password,'estado_usuario'=>1]))
       
       {
         return redirect('/principal');
     }
-    
+        echo 'Usuario o contraseña no coincide';
         return redirect('/');
     }
     /**
@@ -57,13 +60,12 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'nombre_usuario' => 'required|max:25',          
-            'password' => 'required|confirmed|min:8',
+            'nombre_usuario' => 'required|min:8|max:25',          
+            'password' => 'required|confirmed|min:8|max:25',
         ]);
     }
     public function fnc_salir()
-    {
-               
+    {               
         Auth::logout();
         return redirect('/');
     }

@@ -5,6 +5,7 @@
      * Fecha de creación:11/11/2016
      * Creado por: Juan Carlos Centeno Borja
 -->
+<html lang="es" xml:lang="es"></html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,7 +59,7 @@
 							<a href="#">Reportes</a>
 						</li>
 						<li>
-							<a href="administracion/buscar_usuario">Administración</a>
+							<a href="../administracion/buscar_usuario">Administración</a>
 						</li>
                                                 <li>
 							<a href="#">Ayuda</a>
@@ -85,7 +86,15 @@
                     @yield('menu_lateral') 
 		
 		</div>
-		<div class="col-md-9"><!--area de trabajo -->
+		<div class="col-md-9"><!--area de trabajo -->                   
+                @if($errors->any())
+                    <div class="alert alert-warning" role="alert">
+                    <p>Por favor corregir los siguientes errores</p>
+                       @foreach ($errors->all() as $error)
+                          <div>{{ $error }}</div>
+                      @endforeach
+                    </div>
+                @endif 
 			<div class="row"><!--filtros -->
 				<div class="col-md-12">
                                     @yield('filtros_consulta') 
@@ -106,27 +115,7 @@
 			</div>
 		</div>			
 	</div>
-         <div class="container">
-        @if (Session::has('errors'))
-		    <div class="alert alert-warning alert-dismissible" role="alert">
-		    	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<ul>
-		            <strong>{{ trans('notifications.alert') }}</strong>
-				    @foreach ($errors->all() as $error)
-						<li>{{ $error }}</li>
-			        @endforeach
-			    </ul>
-		    </div>
-		@endif
-        @if (Session::has('status'))
-		    <div class="alert alert-info alert-dismissible" role="alert">
-		    	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<ul>
-		            <strong>{{ trans('notifications.alert') }}</strong>
-					<li>{{ Session::get('status') }}</li>
-		        </ul>
-		    </div>
-		@endif		
+         <div class="container">        	
     </div>
 	<div class="row"><!--pie de pagina -->
 		<div class="col-md-12">

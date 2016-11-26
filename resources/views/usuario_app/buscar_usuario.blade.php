@@ -27,7 +27,35 @@
 @stop
 @section('contenido')
 <div class="panel panel-default">
-    <div class="panel-heading">Inicio</div>
-    <div class="panel-body">You are using bootstrap</div>
+    {!! Form::open(['route' => 'administracion/nuevo_usuario', 'class' => 'form']) !!}
+    <table class="table">   
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Usuario</th>
+        <th>Rol</th>
+        <th>Estado</th>
+        <th>Seleccionar</th>        
+      </tr>
+    </thead>
+    <tbody>
+  @foreach($obj_usuario as $obj_usuarios)
+      <tr>
+        <td>{{$obj_usuarios->id_usuario_app}}</td>
+        <td>{{$obj_usuarios->nombre_usuario}}</td>
+        <td></td>
+        <td>
+            @if($obj_usuarios->estado_usuario==1)
+            Activo
+            @else
+            Bloqueado
+            @endif
+        </td>        
+        <td>{!! Form::radio('seleccionar', null, ['class' => 'form-control' , 'required' => 'required']) !!}</td>       
+      </tr>
+   @endforeach   
+    </tbody>
+  </table>
+ {!! Form::close() !!}
 </div>
 @stop   

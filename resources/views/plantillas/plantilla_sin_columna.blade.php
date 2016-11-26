@@ -5,6 +5,7 @@
      * Fecha de creación:11/11/2016
      * Creado por: Juan Carlos Centeno Borja
 -->
+<html lang="es" xml:lang="es"></html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
